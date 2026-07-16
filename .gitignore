@@ -8,4 +8,3 @@ build/
 *.ipr
 .gradle
 *.log
-.idea
