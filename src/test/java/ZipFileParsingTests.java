@@ -28,8 +28,7 @@ public class ZipFileParsingTests {
                     found = true;
                     if (entry.getName().endsWith(".pdf")) {
                         PDF pdf = new PDF(zis);
-                        Assertions.assertTrue(pdf.text.contains("SELECT"), "Фраза не найдена"
-                        );
+                      Assertions.assertEquals("TrendUp", pdf.author);
                     }
                 }
             }
