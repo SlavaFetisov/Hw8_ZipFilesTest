@@ -1,0 +1,31 @@
+{
+  "type": "Article",
+  "headline": "Американская акита",
+  "name": "ZEN",
+  "description": "Американская акита или большая японская собака",
+
+  "age": {
+    "years": 9,
+    "months": 3
+  },
+  "color": {
+    "primary": "рыжий",
+    "secondary": "черный"
+  },
+  "weight": {
+    "kg": 50,
+    "lastMeasured": "2026-01-01"
+  },
+  "character": {
+    "temperament": [
+      "дружелюбный",
+      "игривый",
+      "независимый"
+    ],
+    "energyLevel": "MEDIUM",
+    "affectionLevel": 8,
+    "childFriendly": true,
+    "catFriendly": false,
+    "strangerFriendly": "CAUTIOUS"
+  }
+}
