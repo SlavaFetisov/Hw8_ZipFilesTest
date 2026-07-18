@@ -6,6 +6,7 @@ import com.opencsv.CSVReaderBuilder;
 import com.opencsv.RFC4180ParserBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
@@ -25,16 +26,17 @@ public class ZipFileParsingTests {
             try (ZipInputStream zis = new ZipInputStream(is)) {
                 ZipEntry entry;
                 while ((entry = zis.getNextEntry()) != null) {
-                    found = true;
                     if (entry.getName().endsWith(".pdf")) {
+                        found = true;
                         PDF pdf = new PDF(zis);
-                      Assertions.assertEquals("TrendUp", pdf.author);
+                        Assertions.assertEquals("TrendUp", pdf.author);
                     }
                 }
             }
         }
         Assertions.assertTrue(found, "PDF файл не найден в архиве testFiles.zip");
     }
+
     @Test
     void zipXlsParsingTest() throws Exception {
         boolean found = false;
@@ -53,7 +55,6 @@ public class ZipFileParsingTests {
         }
         Assertions.assertTrue(found, "XLS-файл файл не найден в архиве testFiles.zip");
     }
-
 
 
     @Test
